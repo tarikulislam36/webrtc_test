@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebRTC Call</title>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+
+  <div class="max-w-4xl mx-auto p-5">
+
+    <h1 class="text-3xl font-bold mb-5">
+      Simple WebRTC Video Call
+    </h1>
+
+    <div class="flex gap-3 mb-5">
+
+      <input
+        id="roomId"
+        placeholder="Room ID"
+        class="p-2 rounded text-black flex-1"
+      />
+
+      <button
+        id="joinBtn"
+        class="bg-blue-500 px-4 py-2 rounded"
+      >
+        Join Room
+      </button>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <div>
+        <h2 class="mb-2">My Video</h2>
+
+        <video
+          id="localVideo"
+          autoplay
+          playsinline
+          muted
+          class="w-full rounded"
+        ></video>
+      </div>
+
+      <div>
+        <h2 class="mb-2">Remote Video</h2>
+
+        <video
+          id="remoteVideo"
+          autoplay
+          playsinline
+          class="w-full rounded"
+        ></video>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
