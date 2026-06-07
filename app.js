@@ -1,5 +1,5 @@
 const socket = io(
-"https://signal.esoco.in:3000/" , {
+"https://signal.esoco.in/" , {
     transports: ["websocket"]
   }
 );
